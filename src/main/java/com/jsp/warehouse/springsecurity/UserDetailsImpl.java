@@ -32,7 +32,7 @@ public class UserDetailsImpl implements UserDetails{
 
 	@Override
 	public String getUsername() {
-		return admin.getAdminEmail();
+		return admin.getEmail();
 	}
 
 	@Override

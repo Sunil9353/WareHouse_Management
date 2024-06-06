@@ -31,7 +31,7 @@ public class Admin {
 	@GeneratedValue()
 	private int adminId;
 	private String adminName;
-	private String adminEmail;
+	private String email;
 	private String password;
 	@Enumerated(EnumType.STRING)
 	private AdminType adminType;
