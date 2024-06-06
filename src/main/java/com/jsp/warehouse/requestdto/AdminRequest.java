@@ -15,7 +15,7 @@ public class AdminRequest {
 	@NotBlank(message = "The Admin name must not be Blank")
 	@NotNull(message = "The Admin name must not be null")
 //	@Pattern(regexp = "^[a-zA-Z0-9._%+-]+@gmail\\.com$",message = "The Email Id must end with @Gmail.com")
-	private String adminEmail;
+	private String email;
 	@NotBlank(message = "The Admin name must not be Blank")
 	@NotNull(message = "The Admin name must not be null")
 //	@Pattern(regexp = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$",

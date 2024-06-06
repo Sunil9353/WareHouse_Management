@@ -20,7 +20,7 @@ import lombok.Setter;
 public class AdminResponse {
 	private int adminId;
 	private String adminName;
-	private String adminEmail;
+	private String email;
 	private AdminType adminType;
 	private List<Privilege> privileges;
 }
