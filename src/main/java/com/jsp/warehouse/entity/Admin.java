@@ -37,7 +37,7 @@ public class Admin {
 	private AdminType adminType;
 	
 	
-	@OneToOne
-	private Warehouse warehouse;
+//	@OneToOne
+//	private Warehouse warehouse;
 	
 }

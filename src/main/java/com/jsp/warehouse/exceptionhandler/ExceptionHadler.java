@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.http.HttpStatus;
-
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.validation.FieldError;
@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import com.jsp.warehouse.entity.Admin;
 import com.jsp.warehouse.exception.IllegalOperationException;
+import com.jsp.warehouse.exception.WareHouseIdNotOFoundException;
 import com.jsp.warehouse.utility.ErrorStructure;
 import com.jsp.warehouse.utility.ResponseStructure;
 
@@ -77,5 +78,20 @@ public class ExceptionHadler {
 				.setStatus(HttpStatus.NOT_FOUND.value()));
 			
 		}	
+		
+		
+		
+		@ExceptionHandler
+		public ResponseEntity<ErrorStructure<String>>   handelWareHouseIdNotOFoundException(WareHouseIdNotOFoundException ex){
+			
+		return 	ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ErrorStructure<String>()
+					.setMessage("ware house id is not present")
+					.setRootCause(ex.getMessage())
+					.setStatus(HttpStatus.NOT_FOUND.value()));
+			
+		}
+		
+		
+		
 
 }
