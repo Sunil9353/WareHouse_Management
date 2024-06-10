@@ -20,6 +20,7 @@ import com.jsp.warehouse.responsedto.AdminResponse;
 import com.jsp.warehouse.service.AdminService;
 import com.jsp.warehouse.utility.ResponseStructure;
 
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.AssertFalse.List;
 @Service
 public class AdminServiceImpl implements  AdminService{
@@ -48,5 +49,11 @@ public class AdminServiceImpl implements  AdminService{
 						.setData(adminMapper.mapToAdminResponse(admin))
 						.setMessage("Admin Saved Successfully")
 						.setStatus(HttpStatus.CREATED.value()));
+	}
+
+	@Override
+	public ResponseEntity<ResponseStructure<AdminResponse>> createAdmin(@Valid AdminRequest adminRequest) {
+		
+		return null;
 	}
 }
